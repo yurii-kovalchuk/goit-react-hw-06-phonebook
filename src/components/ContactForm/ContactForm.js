@@ -3,13 +3,13 @@ import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import { FormWrapper, Label, Input, Btn } from './ContactForm.styled';
 
-export const ContactForm = ({ addContact }) => {
+export const ContactForm = ({ addContacts }) => {
   const initialValues = {
     name: '',
     number: '',
   };
   const onSubmit = ({ name, number }, { resetForm }) => {
-    addContact(name, number, nanoid());
+    addContacts(name, number, nanoid());
     resetForm();
   };
 
